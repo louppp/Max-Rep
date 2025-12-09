@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Prog Muscu - Programme de Musculation</title>
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">💪</span>
+                    <h1>Max Rep</h1>
+                </div>
+            </div>
+        </header>
+
+        <main class="container">
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h2>TABLEAU DE BORD</h2>
+                </div>
+                <button id="newBtn" class="btn-new">+ NOUVEAU PR</button>
+            </section>
+
+            <section class="stats-grid" id="statsGrid">
+                <!-- Stats dynamiques seront insérées ici -->
+            </section>
+
+            <section class="history-section" id="historySection" style="display: none;">
+                <ul id="numberList" class="history-list">
+                    <li class="empty-state">Aucun enregistrement</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal Popup -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2>Ajouter un Nouveau PR</h2>
+            
+            <div class="form-group">
+                <label for="exerciseName">Nom de l'exercice</label>
+                <input 
+                    type="text" 
+                    id="exerciseName" 
+                    placeholder="Ex: Pompes" 
+                    class="form-input"
+                    autocomplete="off"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="exerciseMax">Maximum</label>
+                <input 
+                    type="number" 
+                    id="exerciseMax" 
+                    placeholder="Ex: 100" 
+                    class="form-input"
+                    step="0.5"
+                    autocomplete="off"
+                >
+            </div>
+
+            <div class="form-actions">
+                <button id="cancelBtn" class="btn-cancel">Annuler</button>
+                <button id="submitBtn" class="btn-submit">Créer</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/script.js"></script>
+</body>
+</html>
